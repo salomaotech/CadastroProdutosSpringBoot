@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Listar dados cadastrados</title>
+</head>
+<body>
+
+<table border="1" style="solid">
+    <tr>
+        <th>Nome</th>
+        <th>Descrição</th>
+    </tr>
+
+    <tr th:each="cadastro : ${resultados}">
+        <td th:text="${cadastro.nome}"></td>
+        <td th:text="${cadastro.descricao}"></td>
+    </tr>
+</table>
+
+</body>
+</html>
